@@ -25,9 +25,9 @@
 
       <h1>{name}</h1>
       ```
-      - The `script` tag, which is an optional JavaScript block.
-      - The `style` tag, which is another optional block like a common HTML style tag.
-      - The `template` block, is only required block that contains presentation/view of components.
+      - The `script` tag, which is an optional `JavaScript block`.
+      - The `style` tag, which is another optional block like a `common HTML style tag`.
+      - The `template` block, is only required block that contains `presentation/view` of components.
   - `Reactivity` is built into the language/framework itself.
   - Product grade Svelte Apps can be created using legacy `Sapper` or upgraded `Svelte Kit`.
 
