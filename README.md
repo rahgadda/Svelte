@@ -10,9 +10,25 @@
     - Svelte code is then compiled into `vanilla JavaScript`.
   - It provides as a `small bundle size`.
   - Relies on `Templates` instead of using extenssion langauages like `JSX`.
+    - It has good readability as HTML, CSS and JS are available in single `.svelte` file.
+    - The structure of `.svelte` file is given below
+      ```markdown
+      <script>
+        export let name;
+      </script>
+
+      <style>	
+        h1 {
+            color: purple;
+        }
+      </style>
+
+      <h1>{name}</h1>
+      ```
+      - The `script` tag, which is an optional JavaScript block.
+      - The `style` tag, which is another optional block like a common HTML style tag.
+      - The `template` block, is only required block that contains presentation/view of components.
   - `Reactivity` is built into the language/framework itself.
-  - It has good readability as HTML, CSS and JS are available in single `.svelte` file.
-    
   - Product grade Svelte Apps can be created using legacy `Sapper` or upgraded `Svelte Kit`.
 
 ## History
