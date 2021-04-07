@@ -12,6 +12,7 @@
   - Relies on `Templates` instead of using extenssion langauages like `JSX`.
   - `Reactivity` is built into the language/framework itself.
   - It has good readability as HTML, CSS and JS are available in single `.svelte` file.
+    
   - Product grade Svelte Apps can be created using legacy `Sapper` or upgraded `Svelte Kit`.
 
 ## History
@@ -36,3 +37,4 @@
 ## Appendix
 - [Svelte Kit](https://svelte.dev/blog/whats-the-deal-with-sveltekit)
 - [Rich Harris What-is-svelte](https://gist.github.com/Rich-Harris/0f910048478c2a6505d1c32185b61934)
+- [svelte.dev](https://svelte.dev/tutorial/basics)
