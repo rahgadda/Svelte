@@ -3,7 +3,8 @@
 ## Overview
 - It is a free and open-source front end JavaScript framework.
 - Keyfeature of Svelte
-  - It is a compiler. 
+  - It is a compiler.
+    ![](./01-Images/01-Compiler.png) 
     - It has `no depenecies` for execution.
     - Does not require `Virtual DOM` as all the prework is done during compilation.
     - Svelte code is then compiled into `vanilla JavaScript`.
