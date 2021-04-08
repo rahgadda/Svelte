@@ -94,7 +94,6 @@
       Clicked {count} {count === 1 ? 'time' : 'times'}
     </button>
     ```
-    
   - By default, svelte supports `one-way data binding` for `markup attributes`
     - A new tag `bind` is used to convert any markup attribute binding to two-way data binding. 
   - Javascript variable update supports `two-way data binding` that are used in `markup`
@@ -103,7 +102,49 @@
     - Variable defined using `$:` should always be on left hand side. It will update `DOM` if any variable defined on left hand side is updated.
     - `$:` notation can be used with javascript statements, blocks & if statements.
     - Svelte does not `update array/object variables` if any `functions like push, pop, split are used`.
+- **Props:**
+  - Properties are used to `pass data from one component to another`.
+  - `export` keyword is used to declare props.
+  - Initialization of varaible is used to `default values` of props.
+  - We can map props to object using `spread` operator if the object variables are `having same name as props`.
+    ```html
+    <!-- Info.svelte --> 
+    <script>
+      export let name;
+      export let version;
+      export let speed;
+      export let website;
+    </script>
 
+    <p>
+      The <code>{name}</code> package is {speed} fast.
+      Download version {version} from <a href="https://www.npmjs.com/package/{name}">npm</a>
+      and <a href={website}>learn more here</a>
+    </p>
+
+    <!--App.svelte -->
+    <script>
+      import Info from './Info.svelte';
+
+      const pkg = {
+        name: 'svelte',
+        version: 3,
+        speed: 'blazing',
+        website: 'https://svelte.dev'
+      };
+    </script>
+
+    <!--Without Spread Operator>
+    <Info name={pkg.name} version={pkg.version} speed={pkg.speed} website={pkg.website}/>
+    <-->
+
+    <!--With Spread Operator -->
+    <Info {...pkg}/>
+    ```
+- **Conditional Statements:**
+  - 
+
+  
 ## Modules
 - [HelloWorld](https://svelte.dev/repl/845bbc7198b24deebd98c024acd2429f?version=3.37.0)
 - [Transform Data - Uppercase](https://svelte.dev/repl/794ef3a55f1249938a0177c49f5bb217?version=3.37.0)
