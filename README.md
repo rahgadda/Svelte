@@ -141,10 +141,20 @@
     <!--With Spread Operator -->
     <Info {...pkg}/>
     ```
-- **Conditional Statements:**
+- **Statements:**
+  - If/else statements are used to conditionally display markups
+    ```html
+    {#if <condtion>} 
+      <markup>
+    {:else if <condtion>} 
+      <markup>
+    {:else }
+      <markup> 
+    {/if}
+    ```
   - 
 
-  
+
 ## Modules
 - [HelloWorld](https://svelte.dev/repl/845bbc7198b24deebd98c024acd2429f?version=3.37.0)
 - [Transform Data - Uppercase](https://svelte.dev/repl/794ef3a55f1249938a0177c49f5bb217?version=3.37.0)
