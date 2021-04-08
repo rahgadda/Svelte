@@ -8,6 +8,7 @@
     - It has `no dependencies` for execution.
     - Does not require `Virtual DOM` as all the pre-work is done during compilation.
     - Svelte code is then compiled into `vanilla JavaScript`.
+  - Helps to create component based Web Development.
   - It provides as a `small bundle size`.
   - Relies on `Templates` instead of using extension languages like `JSX`.
     - It has good readability as HTML, CSS and JS are available in single `.svelte` file.
@@ -67,15 +68,16 @@
   ```
 - `<style>` tag rules are scoped only to the component its defined and will not leak to entire page.
 - `import` statement is used to import components from other files and include in current component.
-- `{@html }` tag can be used to render HTML directly into a component
+- `{@html }` tag can be used to render HTML directly into a component. Un-trusted sources may lead to XSS attacks.
   ```markdown
   <script>
 	let string = `this string contains some <strong>HTML!!!</strong>`;
   </script>
 
-  <p>This is normal - {string}</p>
+  <p>This is text - {string}</p>
   <p>This is HTML - {@html string}</p>
   ``` 
+- 
 
 ## Modules
 - [HelloWorld](https://svelte.dev/repl/845bbc7198b24deebd98c024acd2429f?version=3.37.0)
