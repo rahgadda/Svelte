@@ -2,14 +2,14 @@
 
 ## Overview
 - It is a free and open-source front end JavaScript framework.
-- Keyfeature of Svelte
+- Key feature of Svelte
   - It is a compiler.
     ![](./01-Images/01-Compiler.png) 
-    - It has `no depenecies` for execution.
-    - Does not require `Virtual DOM` as all the prework is done during compilation.
+    - It has `no dependencies` for execution.
+    - Does not require `Virtual DOM` as all the pre-work is done during compilation.
     - Svelte code is then compiled into `vanilla JavaScript`.
   - It provides as a `small bundle size`.
-  - Relies on `Templates` instead of using extenssion langauages like `JSX`.
+  - Relies on `Templates` instead of using extension languages like `JSX`.
     - It has good readability as HTML, CSS and JS are available in single `.svelte` file.
     - The structure of `.svelte` file is given below
       ```markdown
