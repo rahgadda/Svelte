@@ -77,7 +77,7 @@
   <p>This is text - {string}</p>
   <p>This is HTML - {@html string}</p>
   ``` 
-- Reactivity
+- **Reactivity:**
   - Heart of Svelte reactivity starts with defining `events` to update `DOM`. 
     - Svelte has own declarations example `on:click`, `on:keyup`, `on:change` 
     - `()` should not be added during function call.
@@ -99,8 +99,8 @@
   - This one-way data binding is also applicable for javascript variables declared and used in markups
     - A new variable definition `$:` is used to make any variable support to two-way data binding.
     - Variable defined using `$:` should always be on left hand side. It will update `DOM` if any variable defined on left hand side is updated.
+    - `$:` notation can be used with javascript statements, blocks & if statements 
   - 
-
 
 ## Modules
 - [HelloWorld](https://svelte.dev/repl/845bbc7198b24deebd98c024acd2429f?version=3.37.0)
