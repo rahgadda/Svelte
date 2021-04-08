@@ -11,7 +11,7 @@
   - It provides as a `small bundle size`.
   - Relies on `Templates` instead of using extension languages like `JSX`.
     - It has good readability as HTML, CSS and JS are available in single `.svelte` file.
-    - The structure of `.svelte` file is given below
+    - The structure of `.svelte` file is given below:
       ```markdown
       <script>
         export let name;
@@ -47,8 +47,28 @@
   - A complete overhaul `v3.0.0` was released in `April 2019`
 - Along with Svelte; NYT it is home for creators of `BackboneJS`, `UnderscoreJS`, and `D3`.
 
-## Modules
+## Svelte Conventions
+- Svelte converts your app into ideal JavaScript at *build time*, rather than interpreting your application code at *run time*.
+- `{}` are used to refer `Javascript variables` inside in the `markup`
+  ```markdown
+  <script>
+    let name = 'world';
+  </script>
 
+  <h1>Hello {name}!</h1>
+  ```
+- From `Svelte v3.x` system provides `A11y`- Accessibility warnings if inaccessible markups are added.
+- If markup attributes are having same name as variables then Svelte supports a `Shorthand attribute` notations.
+  ```markdown
+  <img src={src} alt="A man dances.">
+
+  <!-- short attribute notation -->
+  <img {src} alt="A man dances.">
+  ```
+
+## Modules
+- [HelloWorld](https://svelte.dev/repl/845bbc7198b24deebd98c024acd2429f?version=3.37.0)
+- [Transform Data - Uppercase](https://svelte.dev/repl/794ef3a55f1249938a0177c49f5bb217?version=3.37.0)
 
 ## Appendix
 - [Svelte Kit](https://svelte.dev/blog/whats-the-deal-with-sveltekit)
