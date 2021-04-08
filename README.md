@@ -77,11 +77,35 @@
   <p>This is text - {string}</p>
   <p>This is HTML - {@html string}</p>
   ``` 
-- 
+- Reactivity
+  - Heart of Svelte reactivity starts with defining `events` to update `DOM`. 
+    - Svelte has own declarations example `on:click`, `on:keyup`, `on:change` 
+    - `()` should not be added during function call.
+    ```markdown
+    <script>
+      let count = 0;
+
+      function handleClick() {
+        count += 1;
+      }
+    </script>
+
+    <button on:click={handleClick}>
+      Clicked {count} {count === 1 ? 'time' : 'times'}
+    </button>
+    ```
+  - By default, svelte supports one-way data binding
+    - A new tag `bind` is used to convert any markup binding to two-way data binding. 
+  - This one-way data binding is also applicable for javascript variables declared and used in markups
+    - A new variable definition `$:` is used to make any variable support to two-way data binding.
+    - Variable defined using `$:` should always be on left hand side. It will update `DOM` if any variable defined on left hand side is updated.
+  - 
+
 
 ## Modules
 - [HelloWorld](https://svelte.dev/repl/845bbc7198b24deebd98c024acd2429f?version=3.37.0)
 - [Transform Data - Uppercase](https://svelte.dev/repl/794ef3a55f1249938a0177c49f5bb217?version=3.37.0)
+- [Reactivity using FirstName](https://svelte.dev/repl/093ea7c512104574ae008ba75bb2f1fd?version=3.37.0)
 
 ## Appendix
 - [Svelte Kit](https://svelte.dev/blog/whats-the-deal-with-sveltekit)
