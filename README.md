@@ -65,6 +65,17 @@
   <!-- short attribute notation -->
   <img {src} alt="A man dances.">
   ```
+- `<style>` tag rules are scoped only to the component its defined and will not leak to entire page.
+- `import` statement is used to import components from other files and include in current component.
+- `{@html }` tag can be used to render HTML directly into a component
+  ```markdown
+  <script>
+	let string = `this string contains some <strong>HTML!!!</strong>`;
+  </script>
+
+  <p>This is normal - {string}</p>
+  <p>This is HTML - {@html string}</p>
+  ``` 
 
 ## Modules
 - [HelloWorld](https://svelte.dev/repl/845bbc7198b24deebd98c024acd2429f?version=3.37.0)
