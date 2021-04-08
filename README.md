@@ -107,6 +107,7 @@
 - [HelloWorld](https://svelte.dev/repl/845bbc7198b24deebd98c024acd2429f?version=3.37.0)
 - [Transform Data - Uppercase](https://svelte.dev/repl/794ef3a55f1249938a0177c49f5bb217?version=3.37.0)
 - [Reactivity using FirstName](https://svelte.dev/repl/093ea7c512104574ae008ba75bb2f1fd?version=3.37.0)
+- [Reactivity using Arrays/Objects](https://svelte.dev/repl/159a76e0b35743b3b51c1a87b3886238?version=3.37.0)
 
 ## Appendix
 - [Svelte Kit](https://svelte.dev/blog/whats-the-deal-with-sveltekit)
