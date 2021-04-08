@@ -8,7 +8,7 @@
     - It has `no dependencies` for execution.
     - Does not require `Virtual DOM` as all the pre-work is done during compilation.
     - Svelte code is then compiled into `vanilla JavaScript`.
-  - Helps to create component based Web Development.
+  - Helps to create `component` based web development.
   - It provides as a `small bundle size`.
   - Relies on `Templates` instead of using extension languages like `JSX`.
     - It has good readability as HTML, CSS and JS are available in single `.svelte` file.
