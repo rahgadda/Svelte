@@ -94,6 +94,7 @@
       Clicked {count} {count === 1 ? 'time' : 'times'}
     </button>
     ```
+    
   - By default, svelte supports `one-way data binding` for `markup attributes`
     - A new tag `bind` is used to convert any markup attribute binding to two-way data binding. 
   - Javascript variable update supports `two-way data binding` that are used in `markup`
