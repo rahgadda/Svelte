@@ -13,7 +13,7 @@
   - Relies on `Templates` instead of using extension languages like `JSX`.
     - It has good readability as HTML, CSS and JS are available in single `.svelte` file.
     - The structure of `.svelte` file is given below:
-      ```markdown
+      ```html
       <script>
         export let name;
       </script>
@@ -51,7 +51,7 @@
 ## Svelte Conventions
 - Svelte converts your app into ideal JavaScript at *build time*, rather than interpreting your application code at *run time*.
 - `{}` are used to refer `Javascript variables` inside in the `markup`
-  ```markdown
+  ```html
   <script>
     let name = 'world';
   </script>
@@ -60,7 +60,7 @@
   ```
 - From `Svelte v3.x` system provides `A11y`- Accessibility warnings if inaccessible markups are added.
 - If markup attributes are having same name as variables then Svelte supports a `Shorthand attribute` notations.
-  ```markdown
+  ```html
   <img src={src} alt="A man dances.">
 
   <!-- short attribute notation -->
@@ -69,7 +69,7 @@
 - `<style>` tag rules are scoped only to the component its defined and will not leak to entire page.
 - `import` statement is used to import components from other files and include in current component.
 - `{@html }` tag can be used to render HTML directly into a component. Un-trusted sources may lead to XSS attacks.
-  ```markdown
+  ```html
   <script>
 	let string = `this string contains some <strong>HTML!!!</strong>`;
   </script>
@@ -81,7 +81,7 @@
   - Heart of Svelte reactivity starts with defining `events` to update `DOM`. 
     - Svelte has own declarations example `on:click`, `on:keyup`, `on:change` 
     - `()` should not be added during function call.
-    ```markdown
+    ```html
     <script>
       let count = 0;
 
