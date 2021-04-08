@@ -94,13 +94,14 @@
       Clicked {count} {count === 1 ? 'time' : 'times'}
     </button>
     ```
-  - By default, svelte supports one-way data binding
-    - A new tag `bind` is used to convert any markup binding to two-way data binding. 
-  - This one-way data binding is also applicable for javascript variables declared and used in markups
+  - By default, svelte supports `one-way data binding` for `markup attributes`
+    - A new tag `bind` is used to convert any markup attribute binding to two-way data binding. 
+  - Javascript variable update supports `two-way data binding` that are used in `markup`
+    - Svelte does not `update result variables` if any `variables part of equation getting updated`. 
     - A new variable definition `$:` is used to make any variable support to two-way data binding.
     - Variable defined using `$:` should always be on left hand side. It will update `DOM` if any variable defined on left hand side is updated.
-    - `$:` notation can be used with javascript statements, blocks & if statements 
-  - 
+    - `$:` notation can be used with javascript statements, blocks & if statements.
+    - Svelte does not `update array/object variables` if any `functions like push, pop, split are used`.
 
 ## Modules
 - [HelloWorld](https://svelte.dev/repl/845bbc7198b24deebd98c024acd2429f?version=3.37.0)
