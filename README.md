@@ -152,7 +152,17 @@
       <markup> 
     {/if}
     ```
-  - 
+  - Each statements can be used to loop an array and display markups. 
+    - It also supports descturing `each cats as { id, name }` 
+    - We can get index of current record `{#each cats as cat, i}`
+    - If user wanted to update specific record. Each provides mechanism to identify records using key attribute `{#each things as thing (thing.id)}`
+   ```html
+   {#each <array> as <reference>}
+    <markup with reference>
+   {/each}
+
+   ```
+    
 
 
 ## Modules
