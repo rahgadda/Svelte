@@ -79,7 +79,8 @@
   ``` 
 - **Reactivity:**
   - Heart of Svelte reactivity starts with defining `events` to update `DOM`. 
-    - Svelte has own declarations example `on:click`, `on:keyup`, `on:change` 
+    - Svelte enforces use of `on:` directive for declarations; example `on:click`, `on:keyup`, `on:change` 
+    - Events actions can be declared in-line `<div on:mousemove="{e => m = { x: e.clientX, y: e.clientY }}">`
     - `()` should not be added during function call.
     ```html
     <script>
@@ -142,7 +143,7 @@
     <Info {...pkg}/>
     ```
 - **Statements:**
-  - If/else statements are used to conditionally display markups
+  - `If/else` statements are used to conditionally display markups
     ```html
     {#if <condtion>} 
       <markup>
@@ -152,7 +153,7 @@
       <markup> 
     {/if}
     ```
-  - Each statements can be used to loop an array and display markups. 
+  - `Each` statements can be used to loop an array and display markups. 
     - It also supports descturing `each cats as { id, name }` 
     - We can get index of current record `{#each cats as cat, i}`
     - If user wanted to update specific record. Each provides mechanism to identify records using key attribute `{#each things as thing (thing.id)}`
@@ -162,7 +163,16 @@
    {/each}
 
    ```
-    
+  - `Await` statements can be used to work with promises.
+    ```html
+    {#await <promise>}
+      <p>...waiting</p>
+    {:then value}
+      <p>The value is {value}</p>
+    {:catch error}
+      <p style="color: red">{error.message}</p>
+    {/await}
+    ```
 
 
 ## Modules
