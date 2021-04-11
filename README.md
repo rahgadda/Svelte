@@ -81,9 +81,15 @@
   - Heart of Svelte reactivity starts with defining `events` to update `DOM`. 
     - Svelte enforces use of `on:` directive for declarations; example `on:click`, `on:keyup`, `on:change` 
     - Events actions can be declared in-line using ES6 arrow functions `<div on:mousemove="{e => m = { x: e.clientX, y: e.clientY }}">`
-    - Event Dispatching
-    - Event Forwarding
-      - For example, user created a custom button [child component] and any click event of the custom button should be allowed to managed in the parent component then  
+    - **Event Dispatching:**
+      - For example, user created a custom button [child component] and any click event of the custom button should be allowed to managed in the child component then this feature is used. 
+      - In the child component event should be declared.
+      - `createEventDispatcher` can be used to process event on the child and then forward to parent.
+      - Example [here](https://svelte.dev/repl/0997c533357447dbb079ba741127852f?version=3.37.0)
+    - **Event Forwarding:**
+      - For example, user created a custom button [child component] and any click event of the custom button should be allowed to managed in the parent component then this feature is used. 
+      - In the child component event should be declared `<button on:click/>` to support Event Forwarding. 
+      - Example [here](https://svelte.dev/repl/7a4e815a90434e2d97234750463247ee?version=3.37.0)
     - Svelte supports DOM event modification using below `<button on:click|<modifier>={handleClick}>`
       | Modifier        	| Summary                                                                                   	|
       |-----------------	|-------------------------------------------------------------------------------------------	|
