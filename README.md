@@ -80,21 +80,31 @@
 - **Reactivity:**
   - Heart of Svelte reactivity starts with defining `events` to update `DOM`. 
     - Svelte enforces use of `on:` directive for declarations; example `on:click`, `on:keyup`, `on:change` 
-    - Events actions can be declared in-line `<div on:mousemove="{e => m = { x: e.clientX, y: e.clientY }}">`
+    - Events actions can be declared in-line using ES6 arrow funtions `<div on:mousemove="{e => m = { x: e.clientX, y: e.clientY }}">`
+    - Svelte supports DOM event modification using below `<button on:click|<modifier>={handleClick}>`
+      | Modifier        	| Summary                                                                                   	|
+      |-----------------	|-------------------------------------------------------------------------------------------	|
+      | preventDefault  	| Calls event.preventDefault() before running the handler.                                  	|
+      | stopPropagation 	| Calls event.stopPropagation(), preventing the event reaching the next element             	|
+      | passive         	| Improves scrolling performance. Svelte will add it automatically where it's safe to do so 	|
+      | nonpassive      	| Explicitly set passive: false                                                             	|
+      | capture         	| Fires the handler during the capture phase                                                	|
+      | once            	| Remove the handler after the first time it runs                                           	|
+      | self            	| only trigger handler if event.target is the element itself                                	|
     - `()` should not be added during function call.
-    ```html
-    <script>
-      let count = 0;
+      ```html
+      <script>
+        let count = 0;
 
-      function handleClick() {
-        count += 1;
-      }
-    </script>
+        function handleClick() {
+          count += 1;
+        }
+      </script>
 
-    <button on:click={handleClick}>
-      Clicked {count} {count === 1 ? 'time' : 'times'}
-    </button>
-    ```
+      <button on:click={handleClick}>
+        Clicked {count} {count === 1 ? 'time' : 'times'}
+      </button>
+      ```
   - By default, svelte supports `one-way data binding` for `markup attributes`
     - A new tag `bind` is used to convert any markup attribute binding to two-way data binding. 
   - Javascript variable update supports `two-way data binding` that are used in `markup`
