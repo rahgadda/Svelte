@@ -80,7 +80,10 @@
 - **Reactivity:**
   - Heart of Svelte reactivity starts with defining `events` to update `DOM`. 
     - Svelte enforces use of `on:` directive for declarations; example `on:click`, `on:keyup`, `on:change` 
-    - Events actions can be declared in-line using ES6 arrow funtions `<div on:mousemove="{e => m = { x: e.clientX, y: e.clientY }}">`
+    - Events actions can be declared in-line using ES6 arrow functions `<div on:mousemove="{e => m = { x: e.clientX, y: e.clientY }}">`
+    - Event Dispatching
+    - Event Forwarding
+      - For example, user created a custom button [child component] and any click event of the custom button should be allowed to managed in the parent component then  
     - Svelte supports DOM event modification using below `<button on:click|<modifier>={handleClick}>`
       | Modifier        	| Summary                                                                                   	|
       |-----------------	|-------------------------------------------------------------------------------------------	|
@@ -116,7 +119,7 @@
 - **Props:**
   - Properties are used to `pass data from one component to another`.
   - `export` keyword is used to declare props.
-  - Initialization of varaible is used to `default values` of props.
+  - Initialization of variable is used to `default values` of props.
   - We can map props to object using `spread` operator if the object variables are `having same name as props`.
     ```html
     <!-- Info.svelte --> 
@@ -155,9 +158,9 @@
 - **Statements:**
   - `If/else` statements are used to conditionally display markups
     ```html
-    {#if <condtion>} 
+    {#if <condition>} 
       <markup>
-    {:else if <condtion>} 
+    {:else if <condition>} 
       <markup>
     {:else }
       <markup> 
