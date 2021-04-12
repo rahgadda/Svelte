@@ -204,6 +204,7 @@
 - [Event Dispatching](https://svelte.dev/repl/0997c533357447dbb079ba741127852f?version=3.37.0)
 - [Event Forwarding](https://svelte.dev/repl/7a4e815a90434e2d97234750463247ee?version=3.37.0)
 - [HTML REPL](https://svelte.dev/repl/c9b4b28b689a497dbf1182fb871ca5e0?version=3.37.0)
+- [HTML Page Generator](https://svelte.dev/repl/b6917b52facb41acb72cacc1912cca96?version=3.37.0)
 
 ## Appendix
 - [Svelte Kit](https://svelte.dev/blog/whats-the-deal-with-sveltekit)
