@@ -116,7 +116,7 @@
       ```
   - By default, svelte supports `one-way data binding` for `markup attributes`
     - A new tag `bind` is used to convert any markup attribute binding to two-way data binding.
-    - The tag `bind:group` is used to convert grouped markup attribute binding to two-way data binding.
+    - The tag `bind:group` is used to bind values to grouped markup attribute like Radio Buttons, Check Boxes and Dropdowns/Multi Selects.
     - The tag `bind:innerHTML` is used to display html text for elements with a `contenteditable="true"`.
   - Javascript variable update supports `two-way data binding` that are used in `markup`
     - Svelte does not `update result variables` if any `variables part of equation getting updated`. 
