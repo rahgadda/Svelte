@@ -199,6 +199,9 @@
 - [Transform Data - Uppercase](https://svelte.dev/repl/794ef3a55f1249938a0177c49f5bb217?version=3.37.0)
 - [Reactivity using FirstName](https://svelte.dev/repl/093ea7c512104574ae008ba75bb2f1fd?version=3.37.0)
 - [Reactivity using Arrays/Objects](https://svelte.dev/repl/159a76e0b35743b3b51c1a87b3886238?version=3.37.0)
+- [Event Dispatching](https://svelte.dev/repl/0997c533357447dbb079ba741127852f?version=3.37.0)
+- [Event Forwarding](https://svelte.dev/repl/7a4e815a90434e2d97234750463247ee?version=3.37.0)
+- [HTML REPL](https://svelte.dev/repl/c9b4b28b689a497dbf1182fb871ca5e0?version=3.37.0)
 
 ## Appendix
 - [Svelte Kit](https://svelte.dev/blog/whats-the-deal-with-sveltekit)
