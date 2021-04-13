@@ -194,6 +194,20 @@
       <p style="color: red">{error.message}</p>
     {/await}
     ```
+- **Lifecycle:**
+  - Every component has a lifecycle that starts when it is created, and ends when it is destroyed.
+    - `onMount` runs after the component is first rendered to the DOM. 
+      - It's recommended to put the `fetch` in `onMount` rather than at `<script>` because of `server-side rendering (SSR)`
+      - If the `onMount` callback `returns a function`, that function will be called when the component is `destroyed`.
+    - `onDestroy` runs when component is destroyed.
+      - It is used for clean-up of items like `clearInterval`
+    - `beforeUpdate` function schedules work to happen immediately before the DOM is updated.
+    - `afterUpdate` runs code once the DOM is in sync with data.
+    - `tick` is unlike other lifecycle functions
+      - When component state is updated in Svelte, it doesn't update the DOM immediately. 
+      - Instead, it waits until the next microtask to see if there are any other changes that need to be applied, including in other components.
+      - This avoids unnecessary work and allows the browser to batch things more effectively.
+      - `await tick()` can be used inside an async function which returns a promise that resolves as soon as any pending state changes have been applied to the DOM.
 
 
 ## Modules
