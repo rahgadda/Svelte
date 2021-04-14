@@ -208,7 +208,12 @@
       - Instead, it waits until the next microtask to see if there are any other changes that need to be applied, including in other components.
       - This avoids unnecessary work and allows the browser to batch things more effectively.
       - `await tick()` can be used inside an async function which returns a promise that resolves as soon as any pending state changes have been applied to the DOM.
-
+- **Stores:**
+  - Data might be required to be accessed accross mulitple unrelated components. To achive this `stores` are used.
+  - A `store` is simply an object with a `subscribe method` that allows interested parties to be notified whenever the store value changes. It has below methods
+    - Initialization `const count = writable(0);`
+    - Update `count.update(n => n + 1);`
+    - Set `count.set(0);`
 
 ## Modules
 - [HelloWorld](https://svelte.dev/repl/845bbc7198b24deebd98c024acd2429f?version=3.37.0)
