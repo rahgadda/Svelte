@@ -211,9 +211,12 @@
 - **Stores:**
   - Data might be required to be accessed accross mulitple unrelated components. To achive this `stores` are used.
   - A `store` is simply an object with a `subscribe method` that allows interested parties to be notified whenever the store value changes. It has below methods
-    - Initialization `const count = writable(0);`
+    - Writable store initialization `const count = writable(0);` 
     - Update `count.update(n => n + 1);`
     - Set `count.set(0);`
+    - Refer Store Value `{$count}` - Javascript templating is `${count}`
+    - Readable store initialization `const time = readable(initial value, <start function that retruns stop function>);`
+    - Derived store `const elapsed = derived(initial value, <start function>);`
 
 ## Modules
 - [HelloWorld](https://svelte.dev/repl/845bbc7198b24deebd98c024acd2429f?version=3.37.0)
